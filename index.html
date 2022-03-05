@@ -17,89 +17,97 @@
   <body>
     <div class="container">
       <div class="row mx-auto">
-        <div
-          class="col-lg-6 col-sm-6 col-xs-10 mt-4 pt-4 mx-md-auto px-auto"
-          style="align-items: center"
-        >
-          <h4 class="mb-4">Simple Interest Calculator</h4>
-          <div class="col-lg-6 col-sm-6 col-xs-10">
-            <div class="amt">
-              <label for="amount" class="row">Principal Amount: </label>
-              <input
-                type="number"
-                name="amount"
-                id="amount"
-                placeholder=""
-                class="row"
-              />
-            </div>
-            <div class="time">
-              <label for="time" class="row">Time(in years): </label>
-              <input
-                type="number"
-                name="time"
-                id="time"
-                placeholder=""
-                class="row"
-              />
-            </div>
-            <div class="rate">
-              <label for="rate" class="row">Rate of Interest: </label>
-              <input
-                type="number"
-                name="rate"
-                id="rate"
-                placeholder=""
-                class="row"
-              />
-            </div>
-            <br />
-            <div class="button row mb-4">
-              <button class="btn" onclick="CalculateSI()">Calculate</button>
-            </div>
-            <div class="row">
-              <label>Simple Interest: </label>
-            </div>
-            <div class="result mb-4 row">
+        <div class="col-lg-5 col-sm-6 col-xs-10 mt-2 pt-2 mx-md-auto px-auto">
+          <div class="container card si">
+            <h4 class="mb-4">Simple Interest Calculator</h4>
+            <div class="col-lg-8 col-sm-6 col-xs-10">
+              <div class="amt">
+                <label for="amount" class="row">Principal Amount: </label>
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount"
+                  placeholder=""
+                  class="row"
+                  required
+                />
+              </div>
+              <div class="time">
+                <label for="time" class="row">Time(in years): </label>
+                <input
+                  type="number"
+                  name="time"
+                  id="time"
+                  placeholder=""
+                  class="row"
+                  required
+                />
+              </div>
+              <div class="rate">
+                <label for="rate" class="row">Rate of Interest: </label>
+                <input
+                  type="number"
+                  name="rate"
+                  id="rate"
+                  placeholder=""
+                  class="row"
+                  required
+                />
+              </div>
               <br />
-              <h6 id="si"></h6>
+              <div class="button row mb-4">
+                <button class="btn" type="submit" onclick="CalculateSI()">
+                  Calculate
+                </button>
+              </div>
+              <div class="row">
+                <label>Simple Interest: </label>
+              </div>
+              <div class="result mb-4 row">
+                <br />
+                <h6 id="si"></h6>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-xs-10 mt-4 pt-4 mx-md-auto">
-          <h4 class="mb-4">Compound Interest Calculator</h4>
-          <div class="col-lg-6 col-sm-6 col-xs-10">
-            <div class="amt">
-              <label for="amount" class="row">Principal Amount: </label>
-              <input
-                type="number"
-                name="amount"
-                id="principal"
-                placeholder=""
-                class="row"
-              />
-            </div>
-            <div class="rate">
-              <label for="time" class="row">Rate of Interest: </label>
-              <input
-                type="number"
-                name="rate"
-                id="number-of-years"
-                placeholder=""
-                class="row"
-              />
-            </div>
-            <div class="time">
-              <label for="rate" class="row">Enter no of years: </label>
-              <input
-                type="number"
-                name="time"
-                id="annual-interest-rate"
-                placeholder=""
-                class="row"
-              />
-            </div>
-            <div class="compounding-frequency">
+        <div class="col-lg-5 col-sm-6 col-xs-10 mt-2 pt-2 mx-md-auto">
+          <div class="container card ci">
+            <h4 class="mb-4">Compound Interest Calculator</h4>
+            <div class="col-lg-8 col-sm-6 col-xs-10">
+              <div class="amt">
+                <label for="amount" class="row">Principal Amount: </label>
+                <input
+                  type="number"
+                  name="amount"
+                  id="principal"
+                  placeholder=""
+                  class="row"
+                  required
+                />
+              </div>
+              <div class="rate">
+                <label for="time" class="row">Rate of Interest: </label>
+                <input
+                  type="number"
+                  name="rate"
+                  id="number-of-years"
+                  placeholder=""
+                  class="row"
+                  required
+                />
+              </div>
+              <div class="time">
+                <label for="rate" class="row">Enter no of years: </label>
+                <input
+                  type="number"
+                  name="time"
+                  id="annual-interest-rate"
+                  placeholder=""
+                  class="row"
+                  required
+                />
+              </div>
+              <div class="compounding-frequency">
                 <label for="rate" class="row">Compounding Frequency: </label>
                 <select
                   name="CF"
@@ -113,16 +121,19 @@
                   <option>Monthly</option>
                 </select>
               </div>
-            <br />
-            <div class="button row mb-4">
-              <button class="btn" onclick="CalculateCI()">Calculate</button>
-            </div>
-            <div class="row">
-              <label>Compound Interest: </label>
-            </div>
-            <div class="result row mb-4">
               <br />
-              <h6 id="ci"></h6>
+              <div class="button row mb-4">
+                <button class="btn" type="submit" onclick="CalculateCI()">
+                  Calculate
+                </button>
+              </div>
+              <div class="row">
+                <label>Compound Interest: </label>
+              </div>
+              <div class="result row mb-4">
+                <br />
+                <h6 id="ci"></h6>
+              </div>
             </div>
           </div>
         </div>
